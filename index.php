@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>TicTacToe</title>
+        <link rel = 'stylesheet' type = 'text/css' href = 'styles/ui.css'>
+   
+<link rel='stylesheet' href='http://css-tricks.com/examples/ViewSourceButton/css/style.css' />
+    <link rel='stylesheet' href='http://css-tricks.com/examples/ViewSourceButton/css/prettify.css' />
+    <style>
+        #source-code { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); }
+        #source-code:target { display: block; }
+        #source-code pre { padding: 20px; font: 14px/1.6 Monaco, Courier, MonoSpace; margin: 50px auto; background: rgba(0,0,0,0.8); color: white; width: 80%; height: 80%; overflow: auto; }
+        #source-code pre a, #source-code pre a span { text-decoration: none; color: #00ccff !important; }
+        #x { position: absolute; top: 30px; left: 10%; margin-left: -41px; }
+        .button { background: #00ccff; padding: 10px 20px; color: white; text-decoration: none; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+    </style>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
+    <script>
+        $(function() {
+            $("<pre />", {
+                "html":   '&lt;!DOCTYPE html>\n&lt;html>\n' + 
+                        $("html")
+                            .html()
+                            .replace(/[<>]/g, function(m) { return {'<':'&lt;','>':'&gt;'}[m]})
+                            .replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1">$1</a>') + 
+                        '\n&lt;/html>',
+                "class": "prettyprint"
+            }).appendTo("#source-code");
+            
+            prettyPrint();
+        });
+    </script>
+
+    </head>
+
+    <body>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <div id="source-code">
+            <a href="#" id="x"><img src="http://css-tricks.com/examples/ViewSourceButton/images/x.png" alt="close"></a>
+        </div>
+    
+    </div>
+        <div class = 'main-container'>
+<h1>Developed by Sahil Bhalla 120301043 CSE-A 7th Sem for AI Project</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class = 'board'>
+           
+                <div class='cell' data-indx = "0" ></div>
+                <div class='cell' data-indx = "1" ></div>
+                <div class='cell' data-indx = "2" ></div>
+                <div class='cell' data-indx = "3" ></div>
+                <div class='cell' data-indx = "4" ></div>
+                <div class='cell' data-indx = "5" ></div>
+                <div class='cell' data-indx = "6" ></div>
+                <div class='cell' data-indx = "7" ></div>
+                <div class='cell' data-indx = "8" ></div>
+            </div>
+            <br>
+            <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> <a class="button" href="javascript:history.go(0)" id="view-source">Click to Reload</a>&nbsp;&nbsp;<a class="button" href="#source-code" id="view-source">View HTML Source</a>&nbsp;&nbsp;<a class="button" href="scripts/ai.js" id="view-source">View AI.js</a>&nbsp;&nbsp;<a class="button" href="scripts/game.js" id="view-source">View Game.js</a>&nbsp;&nbsp;<a class="button" href="scripts/control.js" id="view-source">View Control.js</a></strong>
+            <div class = 'control'>
+               
+                <div class = 'intial'>
+                   
+
+                    <span class = 'level not-selected' id = "master"><div class='start'>Click Twice to Start </div></span>
+
+
+                </div>
+
+                <div class = 'ingame' id="human">Play</div>
+                
+                <div class = 'ingame' id="won">Win</div>
+                <div class = 'ingame' id="lost">Lose</div>
+                <div class = 'ingame' id="draw">Draw</div>
+            </div>
+        </div>
+
+        <script src = "scripts/jquery-1.10.1.min.js"></script>
+        <script src = "scripts/ui.js"></script>
+        <script src = "scripts/game.js"></script>
+        <script src = "scripts/ai.js"></script>
+        <script src = "scripts/control.js"></script>
+    </body>
+</html>
